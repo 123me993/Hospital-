@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      text-align: left;
+    }
+    th {
+      background: rgba(255,255,255,0.1);
+    }
+    button.action-btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 8px;
+      margin-right: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #fff;
+    }
+    button.approve { background: #00ff9d; color: #000; }
+    button.reject { background: #ff4b2b; }
+    button.delete { background: #ffcc70; color: #000; }
+    input#search {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <h2>Admin Panel</h2>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <input type="text" id="search" placeholder="Search users or appointments">
+
+    <h3>Users</h3>
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h3>Appointments</h3>
+    <table id="appointmentsTable">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Date</th>
+          <th>Reason</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

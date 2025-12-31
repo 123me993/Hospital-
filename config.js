@@ -1,0 +1,1 @@
+const BASE_URL = "https://hospital-backend-zns9.onrender.com";
